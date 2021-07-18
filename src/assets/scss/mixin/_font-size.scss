@@ -1,0 +1,10 @@
+@use "sass:math";
+
+$rem-baseline:16;
+
+@mixin font-size($size: $rem-baseline, $line: $size * 1.6) {
+	font-size: $size + px;
+	font-size: math.div($size, $rem-baseline) + rem;
+	line-height: ($line) + px;
+	line-height: math.div($line, $rem-baseline) + rem;
+}
